@@ -8,7 +8,7 @@ const DATAPRODUK = [
   { id: 4, nama: 'Earphone Wireless Bluetooth TWS', harga: 125000, toko: 'GadgetZone', gambar: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500' },
 ];
 
-export default function App() {
+function Dashboard() {
   const [keranjang, setKeranjang] = useState([]);
   const [cari, setCari] = useState('');
 
@@ -67,7 +67,7 @@ export default function App() {
       <div style={styles.main}>
         {/* DAFTAR PRODUK */}
         <div style={styles.produkSection}>
-          <h2>Produk Pilihan</h2>
+          <h2>Dashboard Produk</h2>
           <div style={styles.grid}>
             {produkDifilter.map((produk) => (
               <div key={produk.id} style={styles.card}>
@@ -125,7 +125,7 @@ export default function App() {
   );
 }
 
-// 2. INLINE STYLES (Agar langsung rapi tanpa perlu file CSS tambahan)
+// 2. INLINE STYLES
 const styles = {
   container: { fontFamily: 'Arial, sans-serif', backgroundColor: '#f5f5f5', minHeight: '100vh', margin: 0 },
   navbar: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#fff', padding: '15px 30px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', position: 'sticky', top: 0, zIndex: 100 },
@@ -140,7 +140,7 @@ const styles = {
   cardBody: { padding: '12px', display: 'flex', flexDirection: 'column', flexGrow: 1 },
   tokoText: { fontSize: '11px', color: '#777', margin: '0 0 5px 0' },
   namaProduk: { fontSize: '14px', margin: '0 0 10px 0', height: '40px', overflow: 'hidden', color: '#333' },
-  hargaProduk: { fontWeight: 'bold', color: '#ee4d2d', margin: '0 0 15px 0' }, // Warna khas e-commerce (oranye/merah)
+  hargaProduk: { fontWeight: 'bold', color: '#ee4d2d', margin: '0 0 15px 0' },
   btnBeli: { backgroundColor: '#2ecc71', color: '#fff', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer', marginTop: 'auto', fontWeight: 'bold' },
   sidebar: { flex: 1, backgroundColor: '#fff', padding: '20px', borderRadius: '8px', height: 'fit-content', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', position: 'sticky', top: '90px' },
   listKeranjang: { maxHeight: '300px', overflowY: 'auto' },
@@ -152,3 +152,4 @@ const styles = {
   btnCheckout: { width: '100%', backgroundColor: '#ee4d2d', color: '#fff', border: 'none', padding: '10px', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }
 };
 
+export default Dashboard;
