@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+// ini komentar
 // DATA POLA BATIK LENGKAP (Termasuk 4 Motif Ikonik Baru)
 const DATAPOLABATIK = [
   {
