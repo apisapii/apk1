@@ -1,0 +1,70 @@
+.exhibitor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.exhibitor-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.exhibitor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.exhibitor-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--cream);
+  border-bottom: 2px solid var(--gold);
+}
+
+.exhibitor-logo {
+  width: 48px;
+  height: 48px;
+  background: var(--maroon);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.exhibitor-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.exhibitor-category {
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.exhibitor-details {
+  padding: 20px 24px;
+}
+
+.exhibitor-origin {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.exhibitor-details p {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 0;
+}
