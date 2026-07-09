@@ -104,6 +104,44 @@ export const EXHIBITORS = [
   { name: 'Dumai Creative Textiles', category: 'Export Quality', origin: 'Dumai', products: 'International-grade batik fabrics' },
 ];
 
+export const BATIK_PHILOSOPHY = {
+  title: 'Philosophy of Riau Batik',
+  patternName: 'Motif Bintang Ikan — The Star-Fish Emblem',
+  image: '/batik-riau.png',
+  intro:
+    'This iconic Riau batik pattern is more than decoration — every line, curve, and color carries centuries of Melayu wisdom passed down through generations of artisans along the Siak, Kampar, and coastal waters of Riau.',
+  elements: [
+    {
+      title: 'Five-Pointed Star & Fish Petals',
+      meaning:
+        'The central emblem radiates five stylized fish-shaped petals, symbolizing the five pillars of Melayu life — faith, family, community, nature, and prosperity. The fish form honors Riau\'s deep bond with its rivers and sea, representing sustenance, abundance, and the lifeblood of coastal communities.',
+    },
+    {
+      title: 'Spiral Core (Ukiran Karang)',
+      meaning:
+        'The scrollwork spiral at the heart of each motif represents the eternal cycle of life — birth, growth, return, and renewal. It reflects the Melayu belief that culture, like nature, moves in harmonious, unending rhythms.',
+    },
+    {
+      title: 'Vine Tendrils & Connecting Scrolls',
+      meaning:
+        'Curving vine-like tendrils weave each emblem together, signifying unity and interconnectedness among Riau\'s diverse communities — from Siak royalty to Kampar highlands to Bengkalis fishermen — all bound by shared heritage.',
+    },
+    {
+      title: 'Diagonal Earth Bands',
+      meaning:
+        'The alternating deep brown and terracotta diagonal stripes represent the fertile Riau land and the warmth of Melayu hospitality. Brown symbolizes the earth and rootedness; terracotta reflects courage, passion, and the fire of creative spirit.',
+    },
+    {
+      title: 'Cream-Gold Outlines',
+      meaning:
+        'The pale cream outlines that define every motif embody purity of intention and the divine light within craftsmanship. In Melayu tradition, gold-toned accents signify nobility, blessing, and the sacred nature of hand-made art.',
+    },
+  ],
+  quote:
+    '"Every thread we weave carries a prayer — that our children will remember who they are, where they come from, and the beauty their ancestors left behind."',
+  quoteAuthor: '— Haji M. Yusuf, Master Canting Artisan, Siak',
+};
+
 export const MOTIFS = [
   {
     name: 'Bunga Cina (Chinese Rose)',

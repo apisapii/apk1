@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import Countdown from '../components/Countdown';
 import BatikPattern from '../components/BatikPattern';
-import { EVENT, ACTIVITIES, MOTIFS, TESTIMONIALS } from '../data/eventData';
+import { EVENT, ACTIVITIES, MOTIFS, TESTIMONIALS, BATIK_PHILOSOPHY } from '../data/eventData';
 import './Home.css';
 
 export default function Home() {
@@ -33,6 +33,45 @@ export default function Home() {
 
       <section className="section countdown-section">
         <Countdown />
+      </section>
+
+      <section className="section philosophy-section">
+        <div className="container">
+          <span className="section-label">Riau Batik Heritage</span>
+          <h2>{BATIK_PHILOSOPHY.title}</h2>
+          <p className="section-desc">{BATIK_PHILOSOPHY.intro}</p>
+
+          <div className="philosophy-grid">
+            <div className="philosophy-image-wrap">
+              <img
+                src={BATIK_PHILOSOPHY.image}
+                alt="Traditional Riau batik pattern — Motif Bintang Ikan"
+                className="philosophy-image"
+              />
+              <div className="philosophy-pattern-label">
+                <strong>{BATIK_PHILOSOPHY.patternName}</strong>
+                <span>Traditional Riau Batik Motif</span>
+              </div>
+            </div>
+
+            <div className="philosophy-content">
+              {BATIK_PHILOSOPHY.elements.map((el) => (
+                <div key={el.title} className="philosophy-item">
+                  <h3>{el.title}</h3>
+                  <p>{el.meaning}</p>
+                </div>
+              ))}
+              <blockquote className="philosophy-quote">
+                <p>{BATIK_PHILOSOPHY.quote}</p>
+                <cite>{BATIK_PHILOSOPHY.quoteAuthor}</cite>
+              </blockquote>
+            </div>
+          </div>
+
+          <div className="philosophy-cta">
+            <Link to="/about" className="link-arrow">Explore More Motifs & Artisan Profiles →</Link>
+          </div>
+        </div>
       </section>
 
       <section className="section about-preview">

@@ -77,6 +77,126 @@
   z-index: 2;
 }
 
+.philosophy-section {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/batik-riau.png') center / 400px repeat;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.philosophy-image-wrap {
+  position: sticky;
+  top: 96px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--gold);
+}
+
+.philosophy-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.philosophy-pattern-label {
+  background: var(--brown);
+  color: var(--cream);
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.philosophy-pattern-label strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.philosophy-pattern-label span {
+  font-size: 0.8rem;
+  color: var(--cream-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.philosophy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.philosophy-item {
+  background: var(--white);
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--maroon);
+  box-shadow: var(--shadow);
+}
+
+.philosophy-item h3 {
+  color: var(--maroon);
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.philosophy-item p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.philosophy-quote {
+  margin: 8px 0 0;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  border-radius: var(--radius);
+  border: none;
+}
+
+.philosophy-quote p {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.philosophy-quote cite {
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.philosophy-cta {
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
 .about-preview {
   background: var(--white);
 }
@@ -248,6 +368,8 @@
 
 @media (max-width: 768px) {
   .split-grid { grid-template-columns: 1fr; }
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .philosophy-image-wrap { position: static; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonial-grid { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding: 80px 16px 60px; }
